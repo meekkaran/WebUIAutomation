@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.7 on win32)" generated="20221109 12:40:37.505" rpa="false" schemaversion="3">
+<suite id="s1" name="LoginExample" source="C:\Users\meekk\Desktop\CRM\tests\LoginExample.robot">
+<test id="s1-t1" name="Successful login" line="6">
+<kw name="Given user opens Chrome browser with URL https://www.inuua.net/" library="Keywords" sourcename="user opens ${browser} browser with URL ${url}">
+<kw name="opens browser with url ${browser} ${url}" library="Common" sourcename="opens browser with url ${browser} ${url}">
+<kw name="Create Webdriver" library="SeleniumLibrary">
+<arg>${browser}</arg>
+<arg>drivers/chromedriver.exe</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<msg timestamp="20221109 12:40:38.133" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<status status="PASS" starttime="20221109 12:40:38.130" endtime="20221109 12:40:42.246"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20221109 12:40:42.247" endtime="20221109 12:40:42.627"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20221109 12:40:42.629" level="INFO">Opening url 'https://www.inuua.net/'</msg>
+<status status="PASS" starttime="20221109 12:40:42.628" endtime="20221109 12:40:48.130"/>
+</kw>
+<status status="PASS" starttime="20221109 12:40:38.127" endtime="20221109 12:40:48.131"/>
+</kw>
+<status status="PASS" starttime="20221109 12:40:38.126" endtime="20221109 12:40:48.134"/>
+</kw>
+<kw name="And user clicks Link Login" library="Keywords" sourcename="user clicks Link ${linkType}">
+<kw name="clicks Link ${linkType}" library="Common" sourcename="clicks Link ${linkType}">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//a[text()='${linkType}']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221109 12:40:48.142" level="INFO">Clicking element '//a[text()='Login']'.</msg>
+<status status="PASS" starttime="20221109 12:40:48.139" endtime="20221109 12:40:48.455"/>
+</kw>
+<status status="PASS" starttime="20221109 12:40:48.138" endtime="20221109 12:40:48.455"/>
+</kw>
+<status status="PASS" starttime="20221109 12:40:48.137" endtime="20221109 12:40:48.455"/>
+</kw>
+<kw name="And user inputs meekkaran@gmail.com as validationLoginFormemail" library="Keywords" sourcename="user inputs ${input} as ${fieldselector}">
+<kw name="inputs ${input} ${fieldselector}" library="Common" sourcename="inputs ${input} ${fieldselector}">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//input[@id='${fieldselector}']</arg>
+<arg>${input}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221109 12:40:48.460" level="INFO">Typing text 'meekkaran@gmail.com' into text field '//input[@id='validationLoginFormemail']'.</msg>
+<status status="PASS" starttime="20221109 12:40:48.459" endtime="20221109 12:40:49.233"/>
+</kw>
+<status status="PASS" starttime="20221109 12:40:48.458" endtime="20221109 12:40:49.233"/>
+</kw>
+<status status="PASS" starttime="20221109 12:40:48.457" endtime="20221109 12:40:49.234"/>
+</kw>
+<kw name="And user inputs 1234567890 as validationLoginFormpassword" library="Keywords" sourcename="user inputs ${input} as ${fieldselector}">
+<kw name="inputs ${input} ${fieldselector}" library="Common" sourcename="inputs ${input} ${fieldselector}">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//input[@id='${fieldselector}']</arg>
+<arg>${input}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221109 12:40:49.239" level="INFO">Typing text '1234567890' into text field '//input[@id='validationLoginFormpassword']'.</msg>
+<status status="PASS" starttime="20221109 12:40:49.238" endtime="20221109 12:40:49.507"/>
+</kw>
+<status status="PASS" starttime="20221109 12:40:49.236" endtime="20221109 12:40:49.508"/>
+</kw>
+<status status="PASS" starttime="20221109 12:40:49.235" endtime="20221109 12:40:49.508"/>
+</kw>
+<kw name="And user clicks button Log In" library="Keywords" sourcename="user clicks button ${ButtonName}">
+<kw name="clicks button ${ButtonName}" library="Common" sourcename="clicks button ${ButtonName}">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//button[normalize-space()='${ButtonName}']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221109 12:40:49.513" level="INFO">Clicking element '//button[normalize-space()='Log In']'.</msg>
+<status status="PASS" starttime="20221109 12:40:49.511" endtime="20221109 12:40:49.759"/>
+</kw>
+<status status="PASS" starttime="20221109 12:40:49.510" endtime="20221109 12:40:49.761"/>
+</kw>
+<status status="PASS" starttime="20221109 12:40:49.509" endtime="20221109 12:40:49.762"/>
+</kw>
+<status status="PASS" starttime="20221109 12:40:38.124" endtime="20221109 12:40:49.769"/>
+</test>
+<status status="PASS" starttime="20221109 12:40:37.510" endtime="20221109 12:40:49.783"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="LoginExample">LoginExample</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
